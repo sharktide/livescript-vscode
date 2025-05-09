@@ -1,0 +1,30 @@
+{
+  "name": "LiveScript VSCode",
+  "displayName": "LiveScript VScode",
+  "description": "New syntax highlighting for the LiveScript language.",
+  "version": "0.0.0",
+  "publisher": "RihaanMeher",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/sharktide/livescript-vscode"
+  },
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "livescript",
+      "aliases": ["livescript", "LiveScript"],
+      "extensions": [".ls"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "livescript",
+      "scopeName": "source.livescript",
+      "path": "./syntaxes/livescript.tmLanguage.json"
+    }]
+  }
+}
