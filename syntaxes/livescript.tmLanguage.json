@@ -1,0 +1,114 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "LiveScript",
+  "patterns": [
+    { "include": "#storage" },
+    { "include": "#keywords" },
+    { "include": "#functions" },
+    { "include": "#variables" },
+    { "include": "#numbers" },
+    { "include": "#strings" },
+    { "include": "#comments" },
+    { "include": "#braces" },
+    { "include": "#parentheses" }
+  ],
+  "repository": {
+    "storage": {
+      "patterns": [
+        {
+          "name": "storage.control.livescript",
+          "match": "\\b(if|else|unless|switch|case|default|for|while|loop|break|continue|return|do|try|catch|finally|throw|import|export|yield)\\b"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.operator.livescript",
+          "match": "\\b(and|or|is|isnt|not|instanceof|typeof|in|of)\\b"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "name": "entity.name.function.livescript",
+          "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\s*(?=[:=]\\s*->)"
+        }
+      ]
+    },
+    "variables": {
+      "patterns": [
+        {
+          "name": "variable.livescript",
+          "match": "(?<!\\.|\\d)\\b[a-zA-Z_][a-zA-Z0-9_]*\\b(?!\\s*\\()"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.livescript",
+          "match": "\\b\\d+(\\.\\d+)?\\b"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.livescript",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.livescript",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.livescript",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.livescript",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.livescript",
+          "begin": "#",
+          "end": "$"
+        },
+        {
+          "name": "comment.block.livescript",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "braces": {
+      "patterns": [
+        {
+          "name": "punctuation.definition.block.livescript",
+          "match": "[{}]"
+        }
+      ]
+    },
+    "parentheses": {
+      "patterns": [
+        {
+          "name": "punctuation.definition.group.livescript",
+          "match": "[()]"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.livescript"
+}
