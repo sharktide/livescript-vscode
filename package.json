@@ -1,12 +1,13 @@
 {
-  "name": "LiveScript VSCode",
+  "name": "LiveScript",
   "displayName": "LiveScript VScode",
-  "description": "New syntax highlighting for the LiveScript language.",
+  "description": "Official LiveScript Grammar used by Github Linguist 9.2.0 +",
   "version": "0.0.0",
   "publisher": "RihaanMeher",
+  "icon": "icons/icon.png",
   "repository": {
-  "type": "git",
-  "url": "https://github.com/sharktide/livescript-vscode"
+    "type": "git",
+    "url": "https://github.com/sharktide/livescript-vscode"
   },
   "engines": {
     "vscode": "^1.90.0"
@@ -15,16 +16,25 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "livescript",
-      "aliases": ["livescript", "LiveScript"],
-      "extensions": [".ls"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "livescript",
-      "scopeName": "source.livescript",
-      "path": "./syntaxes/livescript.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "livescript",
+        "aliases": [
+          "livescript",
+          "LiveScript"
+        ],
+        "extensions": [
+          ".ls"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "livescript",
+        "scopeName": "source.livescript",
+        "path": "./syntaxes/livescript.tmLanguage.json"
+      }
+    ]
   }
 }
